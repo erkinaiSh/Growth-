@@ -1,0 +1,529 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="analogy.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Сынамык Тест</title>
+<body>
+    <div class="quizContainer container-fluid well well-lg">
+        <div id="quiz1" class="text-center">
+			<h2 style="color:black;position:absolute;left:46%;top:-13%;" align="center" >Аналогия</h2>
+			<h3>       </h3>
+			<h4 style="color:#FF0000;position:absolute;left:68%;top:10%;" align="center" ><span id="iTimeShow">Калган убакыт: </span><br/><span id='timer' style="font-size:25px;"></span></h4>
+			<button style="color:#000000;position:absolute;left:70%;top:120%;" class="Button">Тестти аяктоо</button>
+			<button style="color:#000000;position:absolute;left:65%;top:44%;" class="Button1">1</button>
+			<button style="color:#000000;position:absolute;left:68.5%;top:44%;" class="Button2">2</button>
+			<button style="color:#000000;position:absolute;left:72%;top:44%;" class="Button3">3</button>
+			<button style="color:#000000;position:absolute;left:75.5%;top:44%;" class="Button4">4</button>
+			<button style="color:#000000;position:absolute;left:79%;top:44%;" class="Button5">5</button>
+			<button style="color:#000000;position:absolute;left:82.5%;top:44%;" class="Button6">6</button>
+			<button style="color:#000000;position:absolute;left:65%;top:59%;" class="Button7">7</button>
+			<button style="color:#000000;position:absolute;left:68.5%;top:59%;" class="Button8">8</button>
+			<button style="color:#000000;position:absolute;left:72%;top:59%;" class="Button9">9</button>
+			<button style="color:#000000;position:absolute;left:75.5%;top:59%;" class="Button10">10</button>
+			<button style="color:#000000;position:absolute;left:79%;top:59%;" class="Button11">11</button>
+			<button style="color:#000000;position:absolute;left:82.5%;top:59%;" class="Button12">12</button>
+			<button style="color:#000000;position:absolute;left:65%;top:74%;" class="Button13">13</button>
+			<button style="color:#000000;position:absolute;left:68.5%;top:74%;" class="Button14">14</button>
+			<button style="color:#000000;position:absolute;left:72%;top:74%;" class="Button15">15</button>
+			<button style="color:#000000;position:absolute;left:75.5%;top:74%;" class="Button16">16</button>
+			<button style="color:#000000;position:absolute;left:79%;top:74%;" class="Button17">17</button>
+			<button style="color:#000000;position:absolute;left:82.5%;top:74%;" class="Button18">18</button>
+			<button style="color:#000000;position:absolute;left:65%;top:89%;" class="Button19">19</button>
+			<button style="color:#000000;position:absolute;left:68.5%;top:89%;" class="Button20">20</button>
+			<button style="color:#000000;position:absolute;left:72%;top:89%;" class="Button21">21</button>
+			<button style="color:#000000;position:absolute;left:75.5%;top:89%;" class="Button22">22</button>
+			<button style="color:#000000;position:absolute;left:79%;top:89%;" class="Button23">23</button>
+			<button style="color:#000000;position:absolute;left:82.5%;top:89%;" class="Button24">24</button>
+			<button style="color:#000000;position:absolute;left:65%;top:104%;" class="Button25">25</button>
+			<button style="color:#000000;position:absolute;left:68.5%;top:104%;" class="Button26">26</button>
+			<button style="color:#000000;position:absolute;left:72%;top:104%;" class="Button27">27</button>
+			<button style="color:#000000;position:absolute;left:75.5%;top:104%;" class="Button28">28</button>
+			<button style="color:#000000;position:absolute;left:79%;top:104%;" class="Button29">29</button>
+			<button style="color:#000000;position:absolute;left:82.5%;top:104%;" class="Button30">30</button>
+			
+			<h2></h2>
+		</div>
+		
+        <div class="question"></div>
+        <ul class="choiceList"></ul>
+        <div class="quizMessage"></div>
+        <div class="result"></div>
+		<button class="preButton">Алдынкы суроо</button>
+        <button class="nextButton">Кийинки суроо</button>
+		
+    </div>
+</body>
+  </html>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+var questions = [{
+    question: "1. суу жугуруу: онолуу",
+    choices: ["толуу:азуу", "сеер байлоо :семируу", "сөөгу чыгуу:арыктоо", "ирденуу :чунчуу"],
+    correctAnswer: 1
+}, {
+    question: "2. ийин :моюн",
+    choices: ["кежиге :моюн", "омуртка :моюн", "мүрү:моюн", "далы:моюн"],
+    correctAnswer: 0
+}, {
+    question: "3. жүдөө:шылкыюу",
+    choices: ["шалдаю:абдыроо", "чыйралуу :тұздөнүү", "кежейүү:бүжүрөө", "чүнчү:басынуу"],
+    correctAnswer: 2
+}, {
+    question: "4. будөмук:айкын",
+    choices: ["күүгүм :түн", "жарық :карангы", "белгисиз:анык", "себептуу:жуйөлуу"],
+    correctAnswer: 2
+}, {
+    question: "5.Арча:қайың",
+    choices: ["тал :терек", "қарағай :дуб", "арча:чекенде", "себептуу :жуйолуу"],
+    correctAnswer: 0
+},{
+	question: "6. ак:кара ",
+    choices: ["уй:жылкы", "март:берешен", "кир:ыплас", "актык:макрөөлүк"],
+    correctAnswer: 3
+},{
+	question: "7. мугалим:үйрөтүү ",
+    choices: ["өгүз:союу", "кол:сезүү", "кол чабуу:мактоо", "кампа:сактоо"],
+    correctAnswer: 3
+},{
+	question: "8. бугалтер:эсептөө ",
+    choices: ["тээк:илүү", "жумушчу:иштөө", "обончу:жазуу", "өтүк:тебүү"],
+    correctAnswer: 2
+},{
+	question: "9. аз:арыкта ",
+    choices: ["көп:жырга", "кичине:чоң", "эпте:кыйрат", "жүгүр:чурка"],
+    correctAnswer: 0
+},{
+	question: "10. алыс:ыраак ",
+    choices: ["туруктуу:утурумдук", "жакын:бери", "тегиз:тыкан", "таза:аруу"],
+    correctAnswer: 3
+},{
+    question: "11. Булут:асман",
+    choices: ["чөп :күз", "бактерия:тери ", "тамчы:суу", "жалын:от "],
+    correctAnswer: 1
+}, {
+    question: "12. жаныбар:зоология ",
+    choices: ["китеп:китеп", "куш:орнитология", "ит:кинология ", "осумдук:ботаника"],
+    correctAnswer: 3
+}, {
+    question: "13. Кургакчылык:солуу",
+    choices: ["жаанчыл:ылай ", "суу  кую:өсүү ", "күйгүзүү :гүлдөө", "көчүрүү:жок болуу"],
+    correctAnswer: 1
+}, {
+    question: "14. тага:жээн ",
+    choices: ["жеңе :ага ", "таэже:апа", "таэже:апа", "эже:сиңди"],
+    correctAnswer: 3
+}, {
+    question: "15. китеп:клей ",
+    choices: ["салат:сарымсак ", "шербет:кымыз", "адам:жаныбар ", "кесиптеш иш кана"],
+    correctAnswer: 0
+},{
+	question: "16. муң:сүйүнүч",
+    choices: ["саратан:кыш чилде", "казан:табак", "гүл:роза", "коркок:үркөк"],
+    correctAnswer: 0
+},{
+	question: "17. илим :социлогия",
+    choices: ["илим:педагогика", "илим:архитектура", "илим:физика", "илим:зоология"],
+    correctAnswer: 0
+},{
+	question: "18. теоретик:практик",
+    choices: ["врач:ассистент", "пианист:композитор", "архитектор:куруучу", "режиссёр :сценарист "],
+    correctAnswer: 2
+},{
+	question: "19. куроо:соолуу",
+    choices: ["ондоо:бузуу", "байкоо:көрүү", "билүү :сезүү", "казуу:чукуу"],
+    correctAnswer: 3
+},{
+    question: "20. күн батуу:ооз ачар",
+    choices: ["жаны жыл : деп алыш", "жашы кетүү:паспорт", "сот чечими:камак ", "эмгек :ийгилик"],
+    correctAnswer: 2
+},{
+    question: "21. Кычкылтек:аба",
+    choices: ["алтын:шакек", "темир:руда", "көмүр:шахта", "сүт:быштак"],
+    correctAnswer: 3
+}, {
+    question: "22. көрүнгөн:угулган",
+    choices: ["жупуну:жоош", "жаркыраган:ак", "көгүлтүр:шаңгыраган", "шаңкылдаган:шуулдаган"],
+    correctAnswer: 2
+}, {
+    question: "23. дарылоо:айыгуу",
+    choices: ["сүйлөшүү:айтышуу", "сугаруу:өсүү", "уялуу:кызаруу", "ойлонуу:кайгыруу"],
+    correctAnswer: 1
+}, {
+    question: "24. дарылануу:айыгуу",
+    choices: ["чуркоо:эс алуу", "сугаруу:өсүү", "уялуу:кызаруу", "чарчоо:иштөө"],
+    correctAnswer: 2
+}, {
+    question: "25. сынак:жыйынтык",
+    choices: ["тапанча:ок", "календарь:ай", "өндүрүү:сатуу", "бузулуу:оңдоо."],
+    correctAnswer: 2
+},{
+	question: "26. Дарак:китеп",
+    choices: ["дарак:кагаз ", "кебез:көйнөк ", "дан:буудай ", "эт:Бодо мал "],
+    correctAnswer: 1
+},{
+	question: "27. Кароо:тиктөө",
+    choices: ["ыргалуу:эс алуу ", "басуү:чуркоо ", "жазүу:чиймелөө ", "уруу:согуу"],
+    correctAnswer: 1
+},{
+	question: "28. Сан:цифра ",
+    choices: ["дан:арпа", "машина:тетик ", "торчо:дептер", "тамак :калория "],
+    correctAnswer: 1
+},{
+	question: "29. туз: ачуу",
+    choices: ["май:сары", "бал :татту", "алма :кычкыл", "сүт :суюк "],
+    correctAnswer: 1
+},{
+	question: "30. Бычак:кесүү",
+    choices: ["бычак:курч", "бычак:бөлүү", "бычак: коркутуу", "бычак :бириктирүү"],
+    correctAnswer: 1
+}];
+
+
+
+var currentQuestion = 0;
+var viewingAns = 0;
+var correctAnswers = 0;
+var quizOver = false;
+var iSelectedAnswer = [];
+	var c=1800;
+	var t;
+$(document).ready(function () 
+{
+    // Display the first question
+    displayCurrentQuestion();
+    $(this).find(".quizMessage").hide();
+    $(this).find(".preButton").attr('disabled', 'disabled');
+	
+	timedCount();
+	
+	$(this).find(".preButton").on("click", function () 
+	{		
+		
+        if (!quizOver) 
+		{
+			if(currentQuestion == 0) { return false; }
+	
+			if(currentQuestion == 1) {
+			  $(".preButton").attr('disabled', 'disabled');
+			}
+			
+				currentQuestion--; // Since we have already displayed the first question on DOM ready
+				if (currentQuestion < questions.length) 
+				{
+					displayCurrentQuestion();
+					
+				} 					
+		} else {
+			if(viewingAns == 3) { return false; }
+			currentQuestion = 0; viewingAns = 3;
+			viewResults();		
+		}
+    });
+	
+	$(this).find(".Button").on("click", function () 
+	{		
+		
+        if (!quizOver) 
+		{
+		
+	
+			if(currentQuestion >= 0) {
+			  $(".Button").attr('disabled', 'disabled');
+			
+					displayScore();
+					$('#iTimeShow').html('Калган убакыт');
+					$().html("Турра жооптордун саны: " + correctAnswers + " out of: " + questions.length);
+					
+					
+					quizOver = true;
+					return false;
+					
+				}
+				
+				
+					
+		} 					
+		
+    });
+
+	
+	
+ 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+ 	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	// On clicking next, display the next question
+    $(this).find(".nextButton").on("click", function () 
+	{
+        if (!quizOver) 
+		{
+			
+            var val = $("input[type='radio']:checked").val();
+				// TODO: Remove any message -> not sure if this is efficient to call this each time....
+                $(document).find(".quizMessage").hide();
+				if (val == questions[currentQuestion].correctAnswer) 
+				{
+					correctAnswers++;
+				}
+				iSelectedAnswer[currentQuestion] = val;
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			
+				
+				currentQuestion++; // Since we have already displayed the first question on DOM ready
+				if(currentQuestion >= 1) {
+					  $('.preButton').prop("disabled", false);
+				}
+				if (currentQuestion < questions.length) 
+				{
+					
+					if (currentQuestion  != questions.length-1 ) 
+					{
+					
+					displayCurrentQuestion();
+					$(document).find(".nextButton").text("Кийинки суроо");
+					}
+					else
+					{
+					 
+					$(document).find(".nextButton").text("Тестти аяктоо");
+					displayCurrentQuestion();
+					}
+					
+					
+				}
+				
+								
+				
+				else 
+				{
+					displayScore();
+					$('#iTimeShow').html('Калган убакыт');
+					$().html(" Сиз " + questions.length + " суроодон " + correctAnswers + " туура кылдыныз");
+					
+					
+					quizOver = true;
+					return false;
+					
+				}
+			
+					
+		}	
+		
+    });
+});
+
+
+
+function timedCount()
+	{
+		if(c == 185) 
+		{ 
+			return false; 
+		}
+		
+		var hours = parseInt( c / 3600 ) % 24;
+		var minutes = parseInt( c / 60 ) % 60;
+		var seconds = c % 60;
+		var result = (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds  < 10 ? "0" + seconds : seconds);            
+		$('#timer').html(result);
+		
+		if(c == 0 )
+		{
+					displayScore();
+					$('#iTimeShow').html('Сизге берилген убакыт бутту!');
+					$('#timer').html("Сиз " + questions.length + " суроодон " + correctAnswers + " туура кылдыныз");
+					c=185;
+					$(document).find(".preButton").text("Жоопторун кароо");
+					$(document).find(".nextButton").text("Кайра тапшыруу?");
+					quizOver = true;
+					return false;
+					
+		}
+		
+		/*if(c == 0 )
+		{	
+			if (!quizOver) 
+			{
+				var val = $("input[type='radio']:checked").val();
+            	if (val == questions[currentQuestion].correctAnswer) 
+				{
+					correctAnswers++;
+				}
+				currentQuestion++; // Since we have already displayed the first question on DOM ready
+				
+				if (currentQuestion < questions.length) 
+				{
+					displayCurrentQuestion();
+					c=15;
+				} 
+				else 
+				{
+					displayScore();
+					$('#timer').html('');
+					c=16;
+					$(document).find(".nextButton").text("Play Again?");
+					quizOver = true;
+					return false;
+				}
+			}
+			else 
+			{ // quiz is over and clicked the next button (which now displays 'Play Again?'
+				quizOver = false;
+				$(document).find(".nextButton").text("Next Question");
+				resetQuiz();
+				displayCurrentQuestion();
+				hideScore();
+			}		
+		}	*/
+		c = c - 1;
+		t = setTimeout(function()
+		{
+			timedCount()
+		},1000);
+	}
+	
+	
+// This displays the current question AND the choices
+function displayCurrentQuestion() 
+{
+
+	
+    //console.log("In display current Question");
+	
+	
+    var question = [questions[currentQuestion ].question, questions[currentQuestion+1 ].question, questions[currentQuestion+2 ].question, questions[currentQuestion+3 ].question, questions[currentQuestion + 4].question] ;
+	
+	
+	var questionClass = $(document).find(".quizContainer > .question");
+    var choiceList = $(document).find(".quizContainer > .choiceList");
+    var numChoices = questions[currentQuestion].choices.length;
+    // Set the questionClass text to the current question
+    $(questionClass).text(question);
+    // Remove all current <li> elements (if any)
+    $(choiceList).find("li").remove();
+    var choice;
+	
+	
+	
+    for (i = 0; i < numChoices; i++) 
+	{
+        choice = questions[currentQuestion].choices[i];
+		
+		if(iSelectedAnswer[currentQuestion] == i) {
+			$('<li><input type="radio" class="radio-inline" checked="checked"  value=' + i + ' name="dynradio" />' +  ' ' + choice  + '</li>').appendTo(choiceList);
+		} else {
+			$('<li><input type="radio" class="radio-inline" value=' + i + ' name="dynradio" />' +  ' ' + choice  + '</li>').appendTo(choiceList);
+		}
+    }
+}
+
+
+
+
+function displayScore()
+{
+    $(document).find(".quizContainer > .result").text("Сиз " + questions.length + " суроодон " + correctAnswers + " туура кылдыныз");
+    $(document).find(".quizContainer > .result").show();
+}
+
+function hideScore() 
+{
+    $(document).find(".result").hide();
+}
+
+// This displays the current question AND the choices
+function viewResults() 
+{
+
+	if(currentQuestion == 30) { currentQuestion = 0;return false; }
+	if(viewingAns == 1) { return false; }
+
+	hideScore();
+    var question = questions[currentQuestion].question;
+    var questionClass = $(document).find(".quizContainer > .question");
+    var choiceList = $(document).find(".quizContainer > .choiceList");
+    var numChoices = questions[currentQuestion].choices.length;
+    // Set the questionClass text to the current question
+    $(questionClass).text(question);
+    // Remove all current <li> elements (if any)
+    $(choiceList).find("li").remove();
+    var choice;
+	
+	
+	for (i = 0; i < numChoices; i++) 
+	{
+        choice = questions[currentQuestion].choices[i];
+		
+		if(iSelectedAnswer[currentQuestion] == i) {
+			if(questions[currentQuestion].correctAnswer == i) {
+				$('<li style="border:2px solid green;margin-top:10px;"><input type="radio" class="radio-inline" checked="checked"  value=' + i + ' name="dynradio" />' +  ' ' + choice  + '</li>').appendTo(choiceList);
+			} else {
+				$('<li style="border:2px solid red;margin-top:10px;"><input type="radio" class="radio-inline" checked="checked"  value=' + i + ' name="dynradio" />' +  ' ' + choice  + '</li>').appendTo(choiceList);
+			}
+		} else {
+			if(questions[currentQuestion].correctAnswer == i) {
+				$('<li style="border:2px solid green;margin-top:10px;"><input type="radio" class="radio-inline" value=' + i + ' name="dynradio" />' +  ' ' + choice  + '</li>').appendTo(choiceList);
+			} else {
+				$('<li><input type="radio" class="radio-inline" value=' + i + ' name="dynradio" />' +  ' ' + choice  + '</li>').appendTo(choiceList);
+			}
+		}
+    }
+	
+	currentQuestion++;
+	
+	setTimeout(function()
+		{
+			viewResults();
+		},3000);
+}
+</script>
