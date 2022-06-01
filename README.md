@@ -1,1 +1,16 @@
-# Growth-
+# Growth- is a web application for all young generation in Kyrgyzstan, and for everyone who wants to improve themselves, prepare for ORT, School Subject Olympiads. This web application is especially for school students of remote part of Kyrgyzstan. The main goal of this web application is education accessibility and quality, resources in most regions of our country is not same as in cities or towns.
+
+![Снимок экрана (42)](https://user-images.githubusercontent.com/58220160/171328622-b33519e1-45f1-4646-bf3a-a22de74d682f.png)
+![Снимок экрана (43)](https://user-images.githubusercontent.com/58220160/171328634-23abb19b-568c-48e0-a5bd-68089ca96215.png)
+![Снимок экрана (44)](https://user-images.githubusercontent.com/58220160/171328644-a7a896a6-3a72-460c-a8b4-cfbc0c5a2a75.png)
+![Снимок экрана (45)](https://user-images.githubusercontent.com/58220160/171328660-93554b83-f599-46dc-9c6d-81aa775d7846.png)
+![Снимок экрана (46)](https://user-images.githubusercontent.com/58220160/171328669-8c6392c8-fa85-43d3-bdf0-6c638f0ad7ae.png)
+![Снимок экрана (47)](https://user-images.githubusercontent.com/58220160/171328680-81074827-0082-48ad-ba6d-4f67363bccd3.png)
+![Снимок экрана (48)](https://user-images.githubusercontent.com/58220160/171328692-1f7988b1-d505-4ce4-bbe7-5e445a19061e.png)
+![Снимок экрана (49)](https://user-images.githubusercontent.com/58220160/171328704-e2fce260-a7cf-40eb-89f2-46e21220f302.png)
+![Снимок экрана (50)](https://user-images.githubusercontent.com/58220160/171328714-c559ea88-49a2-48d2-a741-ad4b4f8b8c2e.png)
+![Снимок экрана (51)](https://user-images.githubusercontent.com/58220160/171328723-80878ba7-e8fd-49db-8a54-8a2a67db497a.png)
+![Снимок экрана (52)](https://user-images.githubusercontent.com/58220160/171328732-7dcaa6c3-cef9-4326-9965-96cf93c90676.png)
+![Снимок экрана (53)](https://user-images.githubusercontent.com/58220160/171328744-671779c8-1d5a-4f6c-a21c-7e6e5baa9d86.png)
+![Снимок экрана (54)](https://user-images.githubusercontent.com/58220160/171328750-4681ced8-f58c-44cd-b44b-25617d9fddde.png)
+![Снимок экрана (55)](https://user-images.githubusercontent.com/58220160/171328759-13cc8079-e76d-4e11-b735-c233aa7a02af.png)
